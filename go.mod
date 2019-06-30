@@ -90,15 +90,21 @@ require (
 	go.uber.org/zap v1.10.0 // indirect
 	gocloud.dev v0.15.0
 	gocloud.dev/pubsub/rabbitpubsub v0.15.0
-	golang.org/x/crypto v0.0.0-20190621222207-cc06ce4a13d4 // indirect
 	golang.org/x/net v0.0.0-20190620200207-3b0461eec859
 	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45
-	golang.org/x/sys v0.0.0-20190626221950-04f50cda93cb // indirect
 	golang.org/x/text v0.3.2
-	golang.org/x/xerrors v0.0.0-20190513163551-3ee3066db522 // indirect
 	google.golang.org/api v0.6.0
-	google.golang.org/genproto v0.0.0-20190626174449-989357319d63
+	google.golang.org/genproto v0.0.0-20190620144150-6af8c5fc6601
 	google.golang.org/grpc v1.21.1
+	//golang.org/x/crypto v0.0.0-20190621222207-cc06ce4a13d4 // indirect
+	//golang.org/x/net v0.0.0-20190620200207-3b0461eec859
+	//golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45
+	//golang.org/x/sys v0.0.0-20190626221950-04f50cda93cb // indirect
+	//golang.org/x/text v0.3.2
+	//golang.org/x/xerrors v0.0.0-20190513163551-3ee3066db522 // indirect
+	//google.golang.org/api v0.6.0
+	//google.golang.org/genproto v0.0.0-20190626174449-989357319d63
+	//google.golang.org/grpc v1.21.1
 	gopkg.in/DataDog/dd-trace-go.v1 v1.15.0
 	gopkg.in/asn1-ber.v1 v1.0.0-20181015200546-f715ec2f112d // indirect
 	gopkg.in/bsm/ratelimit.v1 v1.0.0-20160220154919-db14e161995a // indirect
@@ -106,12 +112,12 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/ldap.v3 v3.0.3
 	gopkg.in/redis.v3 v3.6.4
-	k8s.io/api v0.0.0-20190409021203-6e4e0e4f393b
-	k8s.io/apimachinery v0.0.0-20190404173353-6a84e37a896d
-	k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible
-	k8s.io/klog v0.3.3 // indirect
-	k8s.io/utils v0.0.0-20190607212802-c55fbcfc754a // indirect
-	sigs.k8s.io/yaml v1.1.0 // indirect
+//k8s.io/api v0.0.0-20190409021203-6e4e0e4f393b
+//k8s.io/apimachinery v0.0.0-20190404173353-6a84e37a896d
+//k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible
+//k8s.io/klog v0.3.3 // indirect
+//k8s.io/utils v0.0.0-20190607212802-c55fbcfc754a // indirect
+//sigs.k8s.io/yaml v1.1.0 // indirect
 )
 
 exclude (
@@ -126,13 +132,38 @@ exclude (
 )
 
 replace (
+	cloud.google.com/go => github.com/googleapis/google-cloud-go v0.40.0
 	github.com/golang/lint => github.com/golang/lint v0.0.0-20190227174305-8f45f776aaf1
 	github.com/hashicorp/vault/api => github.com/hashicorp/vault/sdk v1.0.2
 	github.com/hashicorp/vault/sdk => github.com/hashicorp/vault/sdk v0.1.8
 	github.com/prometheus/client_golang => github.com/prometheus/client_golang v0.9.4
 	github.com/testcontainers/testcontainer-go => github.com/testcontainers/testcontainers-go v0.4.0
 	github.com/ugorji/go/codec => github.com/ugorji/go/codec v0.0.0-20181204163529-d75b2dcb6bc8
-	k8s.io/api => k8s.io/api v0.0.0-20190409021203-6e4e0e4f393b
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190404173353-6a84e37a896d
-	k8s.io/client-go => k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible
+
+	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190123085648-057139ce5d2b
+	golang.org/x/exp => github.com/golang/exp v0.0.0-20190510132918-efd6b22b2522
+
+	golang.org/x/image => github.com/golang/image v0.0.0-20190618124811-92942e4437e2
+	golang.org/x/lint => github.com/golang/lint v0.0.0-20181026193005-c67002cb31c3
+	golang.org/x/mobile => github.com/golang/mobile v0.0.0-20190415191353-3e0bab5405d6
+	golang.org/x/mod => github.com/golang/mod v0.1.0
+	golang.org/x/net => github.com/golang/net v0.0.0-20190311183353-d8887717615a
+	golang.org/x/oauth2 => github.com/golang/oauth2 v0.0.0-20180821212333-d2e6202438be
+	golang.org/x/sync => github.com/golang/sync v0.0.0-20181108010431-42b317875d0f
+	golang.org/x/sys => github.com/golang/sys v0.0.0-20180905080454-ebe1bf3edb33
+	golang.org/x/text => github.com/golang/text v0.3.0
+	golang.org/x/time => github.com/golang/time v0.0.0-20190308202827-9d24e82272b4
+	golang.org/x/tools => github.com/golang/tools v0.0.0-20190328211700-ab21143f2384
+	golang.org/x/xerrors => github.com/golang/xerrors v0.0.0-20190513163551-3ee3066db522 // indirect
+
+	google.golang.org/api => github.com/googleapis/google-api-go-client v0.6.0
+	google.golang.org/appengine => github.com/golang/appengine v1.1.0
+	google.golang.org/genproto => github.com/google/go-genproto v0.0.0-20180817151627-c66870c02cf8
+	google.golang.org/grpc => github.com/grpc/grpc-go v1.20.1
+	//k8s.io/api => k8s.io/api v0.0.0-20190409021203-6e4e0e4f393b
+	//k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190404173353-6a84e37a896d
+	//k8s.io/client-go => k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible
+
+	//***sfw***
+	k8s.io => github.com/kubernetes/k8s.io v0.0.0
 )
